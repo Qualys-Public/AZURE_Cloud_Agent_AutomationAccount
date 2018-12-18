@@ -21,7 +21,7 @@ Steps to Deploy:
 ![Image2](scripts.PNG?raw=true "Title")
 
 4. Import the main script named qcainstall.ps1 on azure automation runbook and edit the variables and Save and publish it.
-# ActivationId, CustomerId, url_rpm, url_deb. 
+# ActivationId, CustomerId, url_rpm, url_deb
 ![Image2](runbooks.PNG?raw=true "Title")
 
 5. Start the Runbook.
