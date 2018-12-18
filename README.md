@@ -20,7 +20,8 @@ Steps to Deploy:
 3. Repeat the same for scripts LinucQCA.sh and WindowsQCA.ps1 and Store it in Blob storage referred by variables created in step 1 and let it be private.
 ![Image2](scripts.PNG?raw=true "Title")
 
-4. Import the main script named qcainstall.ps1 on azure automation runbook and save and publish it.
+4. Import the main script named qcainstall.ps1 on azure automation runbook and edit the variables and Save and publish it.
+# ActivationId, CustomerId, url_rpm, url_deb. 
 ![Image2](runbooks.PNG?raw=true "Title")
 
 5. Start the Runbook.
