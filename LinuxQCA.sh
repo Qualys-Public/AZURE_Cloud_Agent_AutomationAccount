@@ -23,10 +23,10 @@ then
      os=$( grep -Ei 'debian|buntu|mint' /etc/*release )
      if [[ -n "$os" || -f "/etc/debian_version" ]];
      then
-         INSTALLER_FILE_URL=$2
+         INSTALLER_FILE_URL=$arg4
          opersys="DEB"
      else
-         INSTALLER_FILE_URL=$1
+         INSTALLER_FILE_URL=$arg3
          opersys="RPM"
      fi
 	 d = $RANDOM
@@ -55,11 +55,11 @@ then
                  sleep 5
                  sudo rpm -ivh /tmp/$d/qualys-cloud-agent.x86_64
                  sleep 5
-                 sudo /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh ActivationId=$4 CustomerId=$3
+                 sudo /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh ActivationId=$arg1 CustomerId=$arg2
      else
          sudo dpkg --install /tmp/$d/qualys-cloud-agent.x86_64
          sleep 5
-         sudo /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh ActivationId=$4 CustomerId=$3
+         sudo /usr/local/qualys/cloud-agent/bin/qualys-cloud-agent.sh ActivationId=$arg1 CustomerId=$arg2
      fi
 else
 	echo "QualysCloudAgent is already installed on this and running"
