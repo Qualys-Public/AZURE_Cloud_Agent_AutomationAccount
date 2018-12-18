@@ -14,9 +14,9 @@ Steps to Deploy:
 1. Create variables named ContainerName, StorageAccountName, StorageAccountKey
 ![Image1](variables.PNG?raw=true "Title")
 
-2. Copy the executables files ( Qualys Cloud Agent exe, rpm or deb files) and upload it to the Blob storage referred by variables created in step 1 and make them publicly accessible.
+2. Copy the executables files ( Qualys Cloud Agent exe, rpm or deb files) and upload it to the Blob storage that is publicly accessible.
 
-3. Repeat the same for scripts LinucQCA.sh and WindowsQCA.ps1 and Store it in Blob storage referred by variables created in step 1. Let teh scripts remain private.
+3. Repeat the same for scripts LinucQCA.sh and WindowsQCA.ps1 and Store it in Blob storage referred by variables created in step 1 and let it be private.
 ![Image2](uploads.PNG?raw=true "Title")
 
 4. Import the main script named qcainstall.ps1 on azure automation runbook and save and publish it.
