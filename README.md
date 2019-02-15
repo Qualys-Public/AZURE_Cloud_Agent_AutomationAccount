@@ -4,15 +4,16 @@ Deploy Qualys Cloud Agent in Azure Virtual Machine (VM) using Azure Automation a
 # License
 _**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUALYS HEREBY DISCLAIMS ALL WARRANTIES AND LIABILITY FOR THE PROVISION OR USE OF THIS SCRIPT.  IN NO EVENT SHALL THESE SCRIPTS BE DEEMED TO BE CLOUD SERVICES AS PROVIDED BY QUALYS**_
 
+## Description
 The powershell script "qcainstall.ps1" logs into the Azure subscription and locates all the Resource Groups in it. Crawling each Resource Groups, it will locate VMs inside them. With the help of Azure Run command "Invoke-AzureRmVMRunCommand" , it will download the script to install Qualys Cloud Agent based on Operating System (OS) of the VM.
 
 Pre-requisites:
 * You have Azure automation account
 * Run as Azure and Connections are set up.
 
-Note: This script does not work on powershell version below 2 and specifically on V5 core due to unavailability of Invoke-webrequest cmdlet. You can opt for the alternatives.
+**_Note: This script does not work on powershell version below 2 and specifically on V5 core due to unavailability of Invoke-webrequest cmdlet. You can opt for the alternatives._**
 
-Steps to Deploy:
+## Usage
 
 1. Create variables named ContainerName, StorageAccountName, StorageAccountKey
 ![Image1](variables.PNG?raw=true "Title")
@@ -24,7 +25,7 @@ Steps to Deploy:
 ![Image2](scripts.PNG?raw=true "Title")
 
 4. Import the main script named qcainstall.ps1 on azure automation runbook and edit the variables and Save and publish it.
-# ActivationId, CustomerId, url_rpm, url_deb
+**ActivationId, CustomerId, url_rpm, url_deb**
 ![Image2](runbooks.PNG?raw=true "Title")
 
 5. Start the Runbook.
